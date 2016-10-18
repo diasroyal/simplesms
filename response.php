@@ -1,7 +1,6 @@
 <?php
     header("content-type: text/xml");
-	$easy 	= array(array("Which ice-cream would you like to have today ?",array(
-	$icecream = array(array("Which ice-cream would you like to have today ?",array("1. Banana Nut Fudge")));
+	$easy 	= array(array("Select",array("1. Banana Nut Fudge")));
 	$medium = array(array("what is 2*2 ?",array("2","4","6","8")));
 	$hard 	= array(array("what is 2+(2*3) ?",array("4","8","12","16")));
 	$easyanswer   = 2;
