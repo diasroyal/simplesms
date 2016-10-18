@@ -11,7 +11,7 @@
 	$reply  = array();
 	if (is_numeric($answer)) {
 		if($answer == 2){
-			$reply = 'Correct answer';
+			$reply = 'Correct answer'.$quiz[$answer][0][1].'On';
 		}
 		else{
 			$reply = 'Wrong answer';
