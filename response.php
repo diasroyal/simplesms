@@ -5,7 +5,7 @@
 	$choice = array(
 	    "icecream" => $icecream);
 	$answer=$_Request['Body'];
-	$reply='Your order for '.$answer.' is placed.'
+	$reply='Your order is placed.'
 	echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 ?>
 
