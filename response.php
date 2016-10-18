@@ -9,9 +9,12 @@
 	// $from   = $_REQUEST['from'];
 	$answer = $_REQUEST['Body'];
 	$reply  = array();
-	if (is_numeric($answer)) {
-			$easy=$easy[answer];
-			$reply = "Your order for".easy."is placed.";
+		if (is_numeric($answer)) {
+		if($answer == 2){
+			$reply = 'Correct answer';
+		}
+		else{
+			$reply = 'Wrong answer';
 		}
 		
 	}
