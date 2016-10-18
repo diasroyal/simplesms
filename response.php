@@ -1,7 +1,7 @@
 <?php
     header("content-type: text/xml");
 	$easy 	= array(array("Which ice-cream would you like to have today ?",array(
-	$icecream = array(array("Which ice-cream would you like to have today ?",array("1. Banana Nut Fudge", "2. Black Walnut", "3. Burgundy Cherry", "4. Butterscotch Ribbon","5. Cherry Macaroon","6. Chocolate","7. Chocolate Almond","8. Chocolate Chip","9. Chocolate Fudge","10. Chocolate Mint","11. Chocolate Ribbon","12. Coffee","13. Coffee Candy","14. Date Nut","15. Egg Nog","16. French Vanilla","17. Green Mint Stick","18. Lemon Crisp","19. Lemon Custard","20. Lemon Sherbet","21. Maple Nut","22. Orange Sherbet", "23. Peach","24. Peppermint Fudge Ribbon","25. Peppermint Stick","26. Pineapple Sherbet","27. Raspberry Sherbet","28. Rocky Road","29. Strawberry","30. Vanilla","31. Vanilla Burnt Almond")));
+	$icecream = array(array("Which ice-cream would you like to have today ?",array("1. Banana Nut Fudge")));
 	$medium = array(array("what is 2*2 ?",array("2","4","6","8")));
 	$hard 	= array(array("what is 2+(2*3) ?",array("4","8","12","16")));
 	$easyanswer   = 2;
