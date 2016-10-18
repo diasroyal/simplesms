@@ -11,18 +11,14 @@
         echo "Key=" . $x . ", Value=" . $x_value;
         echo "<br>";
 	}
-	$icecream = $icecream[$answer];
 	if (is_numeric($answer)) {
-			           
+			$icecream = $icecream[$answer]; 
 			$reply ="Your order for".$icecream."is placed.";
 	}
 	$replyx=array();
 		else if(is_string($answer)){
-		array_push($replyx, $quiz[$answer]);
-		foreach ($quiz[$answer] as $key => $value) {
-			array_push($replyx, PHP_EOL);
-			array_push($replyx, $value);
-		}}
+			$replyx=$icecream;
+		}
        
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
