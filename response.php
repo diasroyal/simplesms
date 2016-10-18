@@ -11,13 +11,16 @@
         echo "Key=" . $x . ", Value=" . $x_value;
         echo "<br>";
 	}
+	
+	$from   = $_POST['From'];
+	$answer = $_POST['Body'];
 	if (is_numeric($answer)) {
 			$icecream = $icecream[$answer]; 
 			$reply ="Your order for".$icecream."is placed.";
 	}
 	$replyx=array();
 		else if(is_string($answer)){
-			$replyx=$icecream;
+			$replyx = $icecream;
 		}
        
 
@@ -27,8 +30,8 @@
 <Response>
 	<Sms>
 			<?php
-				if(is_array($replyx)){
-					foreach($replyx as $key => $value){
+				if(is_array($icecream)){
+					foreach($icecream as $key => $value){
 						echo $value;
 					}
 				}
