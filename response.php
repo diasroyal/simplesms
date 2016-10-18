@@ -15,10 +15,14 @@
 			$icecream = $icecream[$answer]; 
 			$reply ="Your order for".$icecream."is placed.";
 	}
-	$replyx=array();
-		else if(is_string($answer)){
-			$replyx=$icecream;
-		}
+else if(is_string($answer)){
+		array_merge($icecream,$reply);
+				}
+	}
+//	$replyx=array();
+//		else if(is_string($answer)){
+//			$replyx=$icecream;
+//		}
        
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 ?>
@@ -27,7 +31,7 @@
 	<Sms>
 			<?php
 				
-					foreach($icecream as $key => $value){
+					foreach($reply as $key => $value){
 						echo $value;
 					}
 				
