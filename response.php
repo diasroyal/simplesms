@@ -18,8 +18,8 @@
 	}
 	$replyx=array();
 		else if(is_string($answer)){
-		array_push($replyx, $quiz[$answer][0][0]);
-		foreach ($quiz[$answer][0][1] as $key => $value) {
+		array_push($replyx, $quiz[$answer]);
+		foreach ($quiz[$answer] as $key => $value) {
 			array_push($replyx, PHP_EOL);
 			array_push($replyx, $value);
 		}
