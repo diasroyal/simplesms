@@ -32,7 +32,7 @@
 		}
 	}
 	elseif (is_numeric($answer) && is_numeric($_SESSION['answer'])) {
-		if((int)$answer == $_SESSION['answer']){
+		if(round($answer) == round($_SESSION['answer'])){
 			$reply['prev'] = 'Correct answer'.PHP_EOL.PHP_EOL;
 			$reply['welcome'] = printqt();
 		}
