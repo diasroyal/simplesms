@@ -24,7 +24,7 @@
 				break;
 			case 'div':
 				$reply = $x.' / '.$y;
-				$_SESSION['answer']=$x/$y;
+				$_SESSION['answer']=(int)($x/$y);
 				break;	
 			default:
 				$makereply = 'Enter valid numer or type "restart" to start again'.PHP_EOL;
@@ -32,7 +32,7 @@
 		}
 	}
 	elseif (is_numeric($answer) && is_numeric($_SESSION['answer'])) {
-		if($answer == $_SESSION['answer']){
+		if((int)$answer == $_SESSION['answer']){
 			$reply['prev'] = 'Correct answer'.PHP_EOL.PHP_EOL;
 			$reply['welcome'] = printqt();
 		}
