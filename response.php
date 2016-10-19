@@ -47,7 +47,7 @@
 	}
 	// print_r($_SESSION);
 	function printqt(){
-		$makereply = 'Choose one of the following :'.PHP_EOL.PHP_EOL.'add for ADDITION'.PHP_EOL.'sub for SUBTRACTION'.PHP_EOL.'mul for MULTIPLICATION'.PHP_EOL.'div for DIVIVSION'.PHP_EOL;
+		$makereply = 'Welcome to QuizM!'.PHP_EOL.'Choose one of the following :'.PHP_EOL.PHP_EOL.'add for ADDITION'.PHP_EOL.'sub for SUBTRACTION'.PHP_EOL.'mul for MULTIPLICATION'.PHP_EOL.'div for DIVIVSION'.PHP_EOL;
 		return $makereply;
 	}
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
