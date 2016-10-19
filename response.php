@@ -6,7 +6,7 @@
 		$_SESSION['answer']='';
 		$reply['welcome'] = printqt();
 	}
-	elseif (strpos($answer, 'add') !== FALSE || strpos($answer, 'sub') !== FALSE || strpos($answer, 'mul') !== FALSE || strpos($answer, 'div') !== FALSE) {
+	elseif (strpos($answer, 'add') !== FALSE || strpos($answer, 'sub') !== FALSE || strpos($answer, 'mul') !== FALSE || strpos($answer, 'div') !== FALSE || strpos($answer, 'Add') !== FALSE || strpos($answer, 'ADD') !== FALSE || strpos($answer, 'Sub') !== FALSE || strpos($answer, 'SUB') !== FALSE || strpos($answer, 'Mul') !== FALSE || strpos($answer, 'MUL') !== FALSE || strpos($answer, 'Div') !== FALSE || strpos($answer, 'DIV') !== FALSE) {
 		$x = rand(1,100);
 		$y = rand(1,100);
 		switch ($answer) {
