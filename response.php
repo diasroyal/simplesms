@@ -7,8 +7,8 @@
 		$reply['welcome'] = printqt();
 	}
 	elseif (strpos($answer, 'add') !== FALSE || strpos($answer, 'sub') !== FALSE || strpos($answer, 'mul') !== FALSE || strpos($answer, 'div') !== FALSE) {
-		$x = rand(20,30);
-		$y = rand(1,10);
+		$x = rand(1,100);
+		$y = rand(1,100);
 		switch ($answer) {
 			case 'add':
 				$reply = $x.' + '.$y;
@@ -23,8 +23,10 @@
 				$_SESSION['answer']=$x*$y;
 				break;
 			case 'div':
+				$isdivide='div';
+				$z=var_dump(round($x/$y));
 				$reply = $x.' / '.$y;
-				$_SESSION['answer']=$x/$y;
+				$_SESSION['answer']=$z;
 				break;	
 			default:
 				$makereply = 'Enter valid numer or type "restart" to start again'.PHP_EOL;
@@ -36,8 +38,14 @@
 			$reply['prev'] = 'Correct answer'.PHP_EOL.PHP_EOL;
 			$reply['welcome'] = printqt();
 		}
+		if(strpos($isdivide,'div')){
+			$x=round($answer);
+			if($x==$z){
+			$reply['prev'] = 'Correct answer'.PHP_EOL.PHP_EOL;
+			$reply['welcome'] = printqt();}
+		}
 		else{
-			$reply['prev'] = 'Wrong answer'.PHP_EOL.PHP_EOL;
+			$reply['prev'] = 'Wrong answer'.PHP_EOL.'The Correct answer is'.$_SESSION['answer'].PHP_EOL;
 			$reply['welcome'] = printqt();
 		}
 	}
@@ -56,6 +64,7 @@
 <Response>
 	<Sms>
 			<?php
+				echo 'Welcome to QuuizM!';
 				if(is_array($reply)){
 					foreach($reply as $key => $value){
 						echo $value;
