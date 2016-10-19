@@ -13,26 +13,26 @@
 			case 'add':
 			case 'Add':
 			case 'ADD':
-				$reply = $x.' + '.$y;
+				$reply = $x.' + '.$y.' = ?';
 				$_SESSION['answer']=$x+$y;
 				break;
 			case 'sub':
 			case 'Sub':
 			case 'SUB':
-				$reply = $x.' - '.$y;
+				$reply = $x.' - '.$y.' = ?';
 				$_SESSION['answer']=$x-$y;
 				break;
 			case 'mul':
 			case 'Mul':
 			case 'MUL':
-				$reply = $x.' * '.$y;
+				$reply = $x.' * '.$y.' = ? ';
 				$_SESSION['answer']=$x*$y;
 				break;
 			case 'div':
 			case 'Div':
 			case 'DIV': 
 				if($x<$y){
-				$reply = $y.' / '.$x;
+				$reply = $y.' / '.$x.' =? ';
 				$_SESSION['answer']=($y/$x);}
 				else{$reply=$x.' / '.$y;
 				    $_SESSION['answer']=($x/$y);}
