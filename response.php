@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
     header("content-type: text/xml");
 
 	$icecream = array("Select IceCream:"," Banana Nut Fudge"," Black Walnut"," Burgundy Cherry"," Butterscotch Ribbon"," Cherry Macaroon"," Chocolate"," Chocolate Almond"," Chocolate Chip"," Chocolate Fudge"," Chocolate Mint"," Chocolate Ribbon"," Coffee"," Coffee Candy"," Date Nut"," Egg Nog"," French Vanilla"," Green Mint Stick"," Lemon Crisp"," Lemon Custard"," Lemon Sherbet"," Maple Nut"," Orange Sherbet"," Peach"," Peppermint Fudge Ribbon"," Peppermint Stick"," Pineapple Sherbet"," Raspberry Sherbet"," Rocky Road"," Strawberry"," Vanilla"," Vanilla Burnt Almond");
