@@ -23,10 +23,8 @@
 				$_SESSION['answer']=$x*$y;
 				break;
 			case 'div':
-				$isdivide='div';
-				$z=var_dump(round($x/$y));
 				$reply = $x.' / '.$y;
-				$_SESSION['answer']=$z;
+				$_SESSION['answer']=$x/$y;
 				break;	
 			default:
 				$makereply = 'Enter valid numer or type "restart" to start again'.PHP_EOL;
@@ -37,12 +35,6 @@
 		if($answer == $_SESSION['answer']){
 			$reply['prev'] = 'Correct answer'.PHP_EOL.PHP_EOL;
 			$reply['welcome'] = printqt();
-		}
-		if(strpos($isdivide,'div')){
-			$x=round($answer);
-			if($x==$z){
-			$reply['prev'] = 'Correct answer'.PHP_EOL.PHP_EOL;
-			$reply['welcome'] = printqt();}
 		}
 		else{
 			$reply['prev'] = 'Wrong answer'.PHP_EOL.'The Correct answer is'.$_SESSION['answer'].PHP_EOL;
@@ -55,7 +47,7 @@
 	}
 	// print_r($_SESSION);
 	function printqt(){
-		$makereply = 'Welcome to QuizM!'.PHP_EOL.'Choose one of the following :'.PHP_EOL.PHP_EOL.'add for ADDITION'.PHP_EOL.'sub for SUBTRACTION'.PHP_EOL.'mul for MULTIPLICATION'.PHP_EOL.'div for DIVIVSION'.PHP_EOL;
+		$makereply = 'QuizM! '.PHP_EOL.PHP_EOL.'Choose one of the following :'.PHP_EOL.PHP_EOL.'add for ADDITION'.PHP_EOL.'sub for SUBTRACTION'.PHP_EOL.'mul for MULTIPLICATION'.PHP_EOL.'div for DIVIVSION'.PHP_EOL;
 		return $makereply;
 	}
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
@@ -64,7 +56,6 @@
 <Response>
 	<Sms>
 			<?php
-				echo 'Welcome to QuuizM!';
 				if(is_array($reply)){
 					foreach($reply as $key => $value){
 						echo $value;
