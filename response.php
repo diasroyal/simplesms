@@ -2,7 +2,7 @@
 	session_start();
     header("content-type: text/xml");
 	$answer = $_POST['Body'];
-	if (strpos($answer, 'start') !== FALSE || strpos($answer, 'restart') !== FALSE) {
+	if (strpos($answer, 'start') !== FALSE || strpos($answer, 'Start') !== FALSE || strpos($answer, 'START') !== FALSE || strpos($answer, 'restart') !== FALSE || strpos($answer, 'Restart') !== FALSE || strpos($answer, 'RESTART') !== FALSE) {
 		$_SESSION['answer']='';
 		$reply['welcome'] = printqt();
 	}
@@ -11,20 +11,28 @@
 		$y = rand(1,100);
 		switch ($answer) {
 			case 'add':
+			case 'Add':
+			case 'ADD':
 				$reply = $x.' + '.$y;
 				$_SESSION['answer']=$x+$y;
 				break;
 			case 'sub':
+			case 'Sub':
+			case 'SUB':
 				$reply = $x.' - '.$y;
 				$_SESSION['answer']=$x-$y;
 				break;
 			case 'mul':
+			case 'Mul':
+			case 'MUL':
 				$reply = $x.' * '.$y;
 				$_SESSION['answer']=$x*$y;
 				break;
 			case 'div':
+			case 'Div':
+			case 'DIV':
 				$reply = $x.' / '.$y;
-				$_SESSION['answer']=(int)($x/$y);
+				$_SESSION['answer']=($x/$y);
 				break;	
 			default:
 				$makereply = 'Enter valid numer or type "restart" to start again'.PHP_EOL;
@@ -37,7 +45,7 @@
 			$reply['welcome'] = printqt();
 		}
 		else{
-			$reply['prev'] = 'Wrong answer'.PHP_EOL.'The Correct answer is'.$_SESSION['answer'].PHP_EOL;
+			$reply['prev'] = 'Wrong answer'.PHP_EOL.'The Correct answer is '.$_SESSION['answer'].PHP_EOL;
 			$reply['welcome'] = printqt();
 		}
 	}
@@ -47,7 +55,7 @@
 	}
 	// print_r($_SESSION);
 	function printqt(){
-		$makereply = 'QuizM! '.PHP_EOL.PHP_EOL.'Choose one of the following :'.PHP_EOL.PHP_EOL.'add for ADDITION'.PHP_EOL.'sub for SUBTRACTION'.PHP_EOL.'mul for MULTIPLICATION'.PHP_EOL.'div for DIVIVSION'.PHP_EOL;
+		$makereply = 'QuizM! '.PHP_EOL.PHP_EOL.'Choose one of the following :'.PHP_EOL.PHP_EOL.'"Add" for Addition'.PHP_EOL.'"Sub" for Subtraction'.PHP_EOL.'"Mul" for Multiplication'.PHP_EOL.'"Div" for Division'.PHP_EOL;
 		return $makereply;
 	}
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
