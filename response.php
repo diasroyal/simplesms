@@ -30,9 +30,12 @@
 				break;
 			case 'div':
 			case 'Div':
-			case 'DIV':
-				$reply = $x.' / '.$y;
-				$_SESSION['answer']=($x/$y);
+			case 'DIV': 
+				if($x<$y){
+				$reply = $y.' / '.$x;
+				$_SESSION['answer']=($y/$x);}
+				else{$reply=$x.' / '.$y;
+				    $_SESSION['answer']=($x/$y);}
 				break;	
 			default:
 				$makereply = 'Enter valid numer or type "restart" to start again'.PHP_EOL;
