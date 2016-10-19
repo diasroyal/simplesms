@@ -8,7 +8,7 @@
 	);
 	// $to 	= $_REQUEST['to'];
 	// $from   = $_REQUEST['from'];
-	$answer = $_REQUEST['Body'];
+	$answer = $_GET['Body'];
 	foreach($icecream as $x_value) {
         echo "Value=" . $x_value;
         echo "<br>";
